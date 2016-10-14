@@ -1,6 +1,6 @@
 # Dockerfile
 
-FROM ubuntu
+FROM resin/rpi-raspbian:jessie-20160831
 
 
 # make sure apt is up to date
@@ -10,7 +10,7 @@ RUN apt-get update
 RUN apt-get install -y nodejs nodejs-legacy npm git git-core
 
 #install express
-RUN npm install -g express-generator
+#RUN npm install -g express-generator
 
 ADD start.sh /tmp/
 
